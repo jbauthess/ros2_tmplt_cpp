@@ -33,12 +33,14 @@ add_executable(publisher src/publisher_node.cpp)
 add_executable(subscriber src/subscriber_node.cpp)
 add_executable(server src/server_node.cpp)
 add_executable(client src/client_node.cpp)
+add_executable(parameter src/parameter_node.cpp)
 # ... with dependencies
 ament_target_dependencies(basic rclcpp)
 ament_target_dependencies(publisher rclcpp example_interfaces)
 ament_target_dependencies(subscriber rclcpp example_interfaces)
 ament_target_dependencies(server rclcpp example_interfaces)
 ament_target_dependencies(client rclcpp example_interfaces)
+ament_target_dependencies(parameter rclcpp example_interfaces)
 # Packages to install 
 install(TARGETS 
         basic
@@ -46,6 +48,7 @@ install(TARGETS
         subscriber
         server
         client
+        parameter
         DESTINATION lib/${PROJECT_NAME})
 
 ament_package()
