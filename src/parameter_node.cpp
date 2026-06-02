@@ -15,7 +15,7 @@ class ParameterNode : public rclcpp::Node
           this->declare_parameter("name", "R2D2");
 
 
-          // get parmaeter value
+          // get parameter value
           m_param_name = this->get_parameter("name").as_string();
 
        }
